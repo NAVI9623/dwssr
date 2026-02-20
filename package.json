@@ -1,0 +1,17 @@
+{
+  "name": "devcontainer-demo",
+  "version": "1.0.0",
+  "description": "Proyecto con Node.js y MongoDB en Dev Container",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}
