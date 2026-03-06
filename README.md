@@ -45,4 +45,4 @@ feat⭐: Agrega Automatizacion de usuarios
 
 # 👤 Autor
 
-[Rosas Daniel](http://github.com/DanielRosas05)
+[Ramirez Ivan](https://github.com/NAVI9623)
