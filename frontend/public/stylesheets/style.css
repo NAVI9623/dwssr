@@ -47,6 +47,19 @@ hr {
   padding: 20px;
 }
 
+.author-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;       /* hace la foto circular */
+  object-fit: cover;
+  border: 3px solid #ccc;
+  margin-bottom: 16px;
+}
+
+.author-card {
+  text-align: center;
+}
+
 .author-card {
   border: 1px solid #ddd;
   border-radius: 8px;
