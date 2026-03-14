@@ -6,7 +6,9 @@ var Author = require('../models/Author');
 router.get('/', function(req, res, next) {
   res.render('author', { title: 'Sobre el Autor', 
     author: 'Ivan ignacio',
-    description: 'Soy un desarrollador apasionado por la tecnología' });
+    description: 'Soy un desarrollador apasionado por la tecnología',
+  profileimage:'/images/profile.jpg' });
+    
 });
 
 module.exports = router;
