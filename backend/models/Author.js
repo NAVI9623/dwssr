@@ -8,4 +8,5 @@ class Author {
   }
 }
 
-module.exports = Author;
+// module.exports = Author;
+export default Author;

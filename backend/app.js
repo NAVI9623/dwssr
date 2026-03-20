@@ -1,15 +1,27 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+// var createError = require('http-errors');
+import createError from 'http-errors';  
+// var express = require('express');
+import express from 'express';
+// var path = require('path');
+import path from 'path';
+// var cookieParser = require('cookie-parser');
+import cookieParser from 'cookie-parser';
+// var logger = require('morgan');
+import logger from 'morgan';
+// var indexRouter = require('./routes/index');
+import indexRouter from './routes/index.js';
+// var usersRouter = require('./routes/users');
+import usersRouter from './routes/users.js';
+// var authorRouter = require('./routes/author');
+import authorRouter from './routes/author.js';
+import { get } from 'http';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var authorRouter = require('./routes/author');
-
-var app = express();
-
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+//var app = express();
+const app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -40,4 +52,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+// module.exports = app;
+export default app;

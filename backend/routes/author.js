@@ -1,6 +1,10 @@
-var express = require('express');
-var router = express.Router();
-var Author = require('../models/Author');
+// var express = require('express');
+import e from 'express';
+import express from 'express';
+const router = express.Router();
+
+// var Author = require('../models/Author');
+import Author from '../models/Author.js';
 
 /* GET author page. */
 router.get('/', function(req, res, next) {
@@ -11,4 +15,4 @@ router.get('/', function(req, res, next) {
     
 });
 
-module.exports = router;
+export default router;
