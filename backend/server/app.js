@@ -8,12 +8,18 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 // var logger = require('morgan');
 import logger from 'morgan';
+
 // var indexRouter = require('./routes/index');
-import indexRouter from './routes/index.js';
+//import indexRouter from './routes/index.js';
 // var usersRouter = require('./routes/users');
-import usersRouter from './routes/users.js';
+//import usersRouter from './routes/users.js';
 // var authorRouter = require('./routes/author');
-import authorRouter from './routes/author.js';
+//import authorRouter from './routes/author.js';
+
+//  Después — con aliases
+import indexRouter from '#routes/index';
+import usersRouter from '#routes/users';
+import authorRouter from '#routes/author';
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -35,6 +41,8 @@ app.use(express.static(path.join(__dirname, '../../frontend/public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/author', authorRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
