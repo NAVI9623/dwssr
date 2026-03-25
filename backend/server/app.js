@@ -14,7 +14,7 @@ import indexRouter from './routes/index.js';
 import usersRouter from './routes/users.js';
 // var authorRouter = require('./routes/author');
 import authorRouter from './routes/author.js';
-import { get } from 'http';
+
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
@@ -30,7 +30,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../frontend/public')));
+app.use(express.static(path.join(__dirname, '../../frontend/public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
