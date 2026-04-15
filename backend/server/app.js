@@ -8,6 +8,11 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 // var logger = require('morgan');
 import logger from 'morgan';
+// var hbs = require('hbs');
+import hbs from 'hbs';
+
+//importamos el helper de Vite
+import { registerViteHelper } from './lib/vite.js';
 
 // var indexRouter = require('./routes/index');
 //import indexRouter from './routes/index.js';
@@ -28,16 +33,26 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 //var app = express();
 const app = express();
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+//Registrar el HELPER de Vite
+registerViteHelper(hbs);
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// Archivos estaticos de Vite (en producción)
+if(process.env.NODE_ENV === 'production'){
+  app.use(express.static(path.join(__dirname, '../../dist')));
+}
 app.use(express.static(path.join(__dirname, '../../frontend/public')));
 
+// Rutas
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/author', authorRouter);
