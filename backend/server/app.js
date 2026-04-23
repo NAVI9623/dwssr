@@ -47,9 +47,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // Archivos estaticos de Vite (en producción)
-if(process.env.NODE_ENV === 'production'){
-  app.use(express.static(path.join(__dirname, '../../dist')));
-}
+
 app.use(express.static(path.join(__dirname, '../../frontend/public')));
 
 // Rutas

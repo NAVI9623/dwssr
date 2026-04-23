@@ -1,14 +1,15 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: white;
+  background: #f9f9f9;
   min-height: 100vh;
   margin: 0;
   color: #333;
 }
 
 h1, h2 {
-  color: #667eea;
+   color: #1F4E79;             
+  border-bottom: 2px solid #00B7FF; 
 }
 
 a {
