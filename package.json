@@ -1,11 +1,41 @@
 {
+  "name": "dwssr",
+  "version": "0.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "start": "node ./server/bin/www",
+    "dev:back": "nodemon ./server/bin/www",
+    "dev:front": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "npm run lint:back && npm run lint:front",
+    "lint:back": "eslint \"server/**/*.js\"",
+    "lint:front": "eslint \"src/**/*.js\"",
+    "lint:fix": "eslint . --fix"
+  },
+  "imports": {
+    "#routes/*": "./server/routes/*.js",
+    "#views/*": "./server/views/*.js",
+    "#models/*": "./server/models/*.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.6",
+    "debug": "~2.6.9",
+    "dotenv": "^17.3.1",
+    "express": "^4.22.1",
+    "hbs": "^4.2.0",
+    "http-errors": "~1.6.3",
+    "morgan": "^1.10.1"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.2.1",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.5.0",
+    "nodemon": "^3.1.14",
+    "prettier": "^3.8.3",
     "vite": "^8.0.2"
   }
 }
