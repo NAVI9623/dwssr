@@ -1,19 +1,35 @@
-body {
+@import "tailwindcss";
+@plugin "daisyui/index.js";
+
+/* /
+Esta linea defone la ruta de los plantillas de handelbards
+de modo que tailwindcss detecte las clases que aporta los estilos 
+
+
+/ */
+@source "../../server/views/**/*.hbs";
+
+/* body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font:
+    14px "Lucida Grande",
+    Helvetica,
+    Arial,
+    sans-serif;
   background: #f9f9f9;
   min-height: 100vh;
   margin: 0;
   color: #333;
-}
+} */
 
-h1, h2 {
-   color: #1F4E79;             
-  border-bottom: 2px solid #00B7FF; 
+/* h1,
+h2 {
+  color: #1f4e79;
+  border-bottom: 2px solid #00b7ff;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
   text-decoration: none;
   font-weight: bold;
 }
@@ -41,7 +57,7 @@ hr {
   margin: 20px 0;
 }
 
-/* Author page styles */
+/* Author page styles 
 .author-container {
   max-width: 600px;
   margin: 40px auto;
@@ -51,8 +67,8 @@ hr {
 .author-photo img {
   width: 150px;
   height: 150px;
-  border-radius: 50%;       /* hace la foto circular */
-  object-fit: cover;
+  border-radius: 50%; /* hace la foto circular */
+/* object-fit: cover;
   border: 3px solid #ccc;
   margin-bottom: 16px;
 }
@@ -67,9 +83,9 @@ hr {
   padding: 20px;
   background-color: #f9f9f9;
   margin: 20px 0;
-}
+} */
 
-.author-card h2 {
+/* .author-card h2 {
   color: #333;
   margin-top: 0;
 }
@@ -86,4 +102,4 @@ hr {
 
 .back-link a:hover {
   text-decoration: underline;
-}
+}* */

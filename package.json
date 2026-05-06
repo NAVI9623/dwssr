@@ -7,6 +7,7 @@
     "start": "node ./server/bin/www",
     "dev:back": "nodemon ./server/bin/www",
     "dev:front": "vite",
+    "dev:all": "npm run dev:back & npm run dev:front",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "npm run lint:back && npm run lint:front",
@@ -31,11 +32,14 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@tailwindcss/vite": "^4.2.4",
+    "daisyui": "^5.5.19",
     "eslint": "^10.2.1",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.5.0",
     "nodemon": "^3.1.14",
     "prettier": "^3.8.3",
+    "tailwindcss": "^4.2.4",
     "vite": "^8.0.2"
   }
 }
