@@ -1,0 +1,120 @@
+{
+  message: 'GET /favicon.ico 404 27.065 ms - 1150',
+  level: 'info',
+  timestamp: '08-05-2026 16:13:49'
+}
+{
+  message: 'GET / 200 6.295 ms - 724',
+  level: 'info',
+  timestamp: '08-05-2026 16:13:50'
+}
+{
+  message: 'GET / 304 2.926 ms - -',
+  level: 'info',
+  timestamp: '08-05-2026 16:15:47'
+}
+{
+  message: 'GET /author 200 4.275 ms - 689',
+  level: 'info',
+  timestamp: '08-05-2026 16:15:52'
+}
+{
+  message: 'GET /images/profile.jpg 200 98.512 ms - 66243',
+  level: 'info',
+  timestamp: '08-05-2026 16:15:53'
+}
+{
+  message: 'GET //test-logs 404 4.212 ms - 1150',
+  level: 'info',
+  timestamp: '08-05-2026 16:21:58'
+}
+{
+  message: 'Mensaje informativo',
+  level: 'info',
+  timestamp: '08-05-2026 16:22:46'
+}
+{
+  message: 'Mensaje de advertencia',
+  level: 'warn',
+  timestamp: '08-05-2026 16:22:46'
+}
+{
+  message: 'Mensaje de error',
+  level: 'error',
+  timestamp: '08-05-2026 16:22:46'
+}
+{
+  message: 'GET /test-logs 200 3.610 ms - 150',
+  level: 'info',
+  timestamp: '08-05-2026 16:22:46'
+}
+{
+  error: Error: Rechazo de promesa no controlado después de 5 segundos
+      at Timeout._onTimeout (file:///workspaces/dwssr/server/routes/index.js:45:7)
+      at listOnTimeout (node:internal/timers:581:17)
+      at process.processTimers (node:internal/timers:519:7),
+  level: 'error',
+  message: 'unhandledRejection: Rechazo de promesa no controlado después de 5 segundos\n' +
+    'Error: Rechazo de promesa no controlado después de 5 segundos\n' +
+    '    at Timeout._onTimeout (file:///workspaces/dwssr/server/routes/index.js:45:7)\n' +
+    '    at listOnTimeout (node:internal/timers:581:17)\n' +
+    '    at process.processTimers (node:internal/timers:519:7)',
+  stack: 'Error: Rechazo de promesa no controlado después de 5 segundos\n' +
+    '    at Timeout._onTimeout (file:///workspaces/dwssr/server/routes/index.js:45:7)\n' +
+    '    at listOnTimeout (node:internal/timers:581:17)\n' +
+    '    at process.processTimers (node:internal/timers:519:7)',
+  rejection: true,
+  date: 'Fri May 08 2026 16:45:52 GMT+0000 (Coordinated Universal Time)',
+  process: {
+    pid: 32379,
+    uid: 1000,
+    gid: 1000,
+    cwd: '/workspaces/dwssr',
+    execPath: '/usr/local/share/nvm/versions/node/v20.20.0/bin/node',
+    version: 'v20.20.0',
+    argv: [
+      '/usr/local/share/nvm/versions/node/v20.20.0/bin/node',
+      '/workspaces/dwssr/server/bin/www'
+    ],
+    memoryUsage: {
+      rss: 74268672,
+      heapTotal: 30412800,
+      heapUsed: 10925384,
+      external: 2217729,
+      arrayBuffers: 16819
+    }
+  },
+  os: { loadavg: [ 0.5, 0.9, 0.89 ], uptime: 6911.11 },
+  trace: [
+    {
+      column: 7,
+      file: 'file:///workspaces/dwssr/server/routes/index.js',
+      function: 'Timeout._onTimeout',
+      line: 45,
+      method: '_onTimeout',
+      native: false
+    },
+    {
+      column: 17,
+      file: 'node:internal/timers',
+      function: 'listOnTimeout',
+      line: 581,
+      method: null,
+      native: false
+    },
+    {
+      column: 7,
+      file: 'node:internal/timers',
+      function: 'process.processTimers',
+      line: 519,
+      method: 'processTimers',
+      native: false
+    }
+  ],
+  timestamp: '08-05-2026 16:45:52'
+}
+{
+  message: 'GET //test-exception 404 16.101 ms - 1150',
+  level: 'info',
+  timestamp: '08-05-2026 16:48:56'
+}

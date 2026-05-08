@@ -6,8 +6,9 @@ import express from "express";
 import path from "path";
 // var cookieParser = require('cookie-parser');
 import cookieParser from "cookie-parser";
+import morgan from "morgan";
 // var logger = require('morgan');
-import logger from "morgan";
+import logger from "./lib/winston.js";
 // var hbs = require('hbs');
 import hbs from "hbs";
 
@@ -40,7 +41,13 @@ app.set("view engine", "hbs");
 //Registrar el HELPER de Vite
 registerViteHelper(hbs);
 
-app.use(logger("dev"));
+app.use(
+  morgan("dev", {
+    stream: {
+      write: (msg) => logger.info(msg.trim()),
+    },
+  }),
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());

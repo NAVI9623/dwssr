@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/workspaces/dwssr/logs/.ed00495ed87c46579493f9bf2be2c962f98219a8-audit.json",
+    "files": [
+        {
+            "date": 1778256718586,
+            "name": "/workspaces/dwssr/logs/app-2026-05-08.log",
+            "hash": "4fe8036ee74aaccd0154b88e904591282ea428af6cf831d5d8bb7f15230f784c"
+        }
+    ],
+    "hashType": "sha256"
+}
